@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import { Navbar, Nav, Button, Form, FormControl} from 'react-bootstrap';
 import Logo from '../images/logo2.png'
-import headerStyle from './Header.module.css'
+import headerStyle from './Header.module.scss'
 
 
 const logoStyle = {

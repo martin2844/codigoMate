@@ -3,9 +3,6 @@ import Header from './Header'
 import Footer from './Footer'
 
 
-const margins = {
-    margin: "0 20rem 0"
-}
 
 const marginSmall = {
     margin: "4rem 1rem 1rem",
@@ -20,7 +17,7 @@ const Layout = (props) => {
   
 <Header/>
 
-        <div style={margins}>
+        <div>
             <div style={marginSmall}>
 
 {props.children}

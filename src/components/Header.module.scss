@@ -1,31 +1,130 @@
 
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap");
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
-.font {
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+//start navbar 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
     font-family: 'Anonymous Pro', monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: black;
+    padding: 0 20rem;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.logo {
+    
+    
+    position: relative;
+    top: 3px;
+   
+    
+}
+
+
+.navbar-links { 
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    li {
+        list-style: none;
+    }
+
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
   
 }
 
-
-.font a:hover {
-    color: cornflowerblue !important;
-}
-
-
-.pad {
-    padding: 1rem 20rem 1rem;
-  
-}
-
-
-.bounce {
- padding-bottom: 0;
+.link:hover {
+    color: cornflowerblue
 }
 
 
 
-.bounce:hover {
+//toggle burger
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px; 
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: black;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 1180px) {
+
+    .navbar {
+        padding: 0 10rem;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 535px) {
+
+    .navbar {
+        padding: 0; 
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .navbar-links { 
+        ul {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+}
+
+}
+
+
+.brand-title:hover {
     animation: bounce 2.5s infinite;
     -webkit-animation: bounce 2.5s infinite; 
     -moz-animation: bounce 2.5s infinite; 

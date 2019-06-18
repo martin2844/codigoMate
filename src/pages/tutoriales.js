@@ -32,7 +32,7 @@ const Tutoriales = ()=> {
             <ol className="noclass">
             {
             pijon.map((edge)=> {
-                let url = "./tutoriales/" + edge.node.fields.slug;
+                let url = "./tutorial/" + edge.node.fields.slug;
                 return (
                     <li className="noclass">
                         <Link to={url} >

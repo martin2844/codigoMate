@@ -14,7 +14,7 @@ const Footer = () => {
             </div>
             
              
-            <p className={footerStyles.footerLinkSm}><Link to="/">codigoMate© 2019</Link></p>
+            <p className={footerStyles.footerLinkSm}><Link className={footerStyles.nodecor} to="/">codigoMate© 2019</Link></p>
             
     
     

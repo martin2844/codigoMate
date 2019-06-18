@@ -35,3 +35,11 @@
   
   
   }
+
+  .nodecor {
+    text-decoration: none;
+}
+
+.nodecor:visited {
+  color: grey;
+}

@@ -2,13 +2,8 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+import layoutStyle from './Layout.module.scss'
 
-
-const marginSmall = {
-    margin: "4rem 1rem 1rem",
-    background: "red"
-   
-}
 
 
 const Layout = (props) => {
@@ -17,10 +12,9 @@ const Layout = (props) => {
   
 <Header/>
 
-        <div>
-            <div style={marginSmall}>
-
-{props.children}
+        <div className={layoutStyle.main}>
+            <div >
+                    {props.children}
             </div>
         
         </div>

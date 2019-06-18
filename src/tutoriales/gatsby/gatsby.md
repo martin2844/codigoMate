@@ -2,7 +2,7 @@
 
 title: "The gatsby blog"
 date: "2019-06-05"
-featuredImage: "./car.jpg"
+featuredImage: "./nissan.jpg"
 
 ---
 

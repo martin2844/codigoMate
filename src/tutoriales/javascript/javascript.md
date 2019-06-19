@@ -1,14 +1,14 @@
 ---
 
 title: "The gatsby blog"
-date: "2019-06-05"
-featuredImage: "./nissan.jpg"
+date: "2018-12-05"
+featuredImage: "./tehcar.jpg"
 type: "JS"
 ---
 
-I Wanna write a blog
+This is javascript
 
-![Car](./car.jpg)
+![Car](./tehcar.jpg)
 
 ## Topícs for today
 

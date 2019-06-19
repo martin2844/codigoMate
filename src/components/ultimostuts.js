@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
+//material UI
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -18,12 +18,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
-
-
 import Grid from '@material-ui/core/Grid';
 
-import center from './center.module.scss'
+//scss
+import center from '../pages/center.module.scss'
 
 
 
@@ -60,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   }));
 
 
-const Tutoriales = ()=> {
+const UltimosTuts = ()=> {
     const blog = useStaticQuery(graphql`
     query {
         allMarkdownRemark (
@@ -100,8 +98,8 @@ const Tutoriales = ()=> {
     );
 
 
-    let pijon = blog.allMarkdownRemark.edges;
-
+    let cartillas = blog.allMarkdownRemark.edges;
+    
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -111,15 +109,12 @@ const Tutoriales = ()=> {
 
 
     return (
-        <Layout>
-           
-            
-            <h1>Tutoriales</h1>
-            <div className={center.center}> 
+
+        <div className={center.center}> 
             <div className={classes.root}>
             <Grid container spacing={2} >
             {
-            pijon.map((edge)=> {
+            cartillas.map((edge)=> {
                 let url = "./tutorial/" + edge.node.fields.slug;
                 console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
                 
@@ -230,14 +225,15 @@ const Tutoriales = ()=> {
                         
                   
                 )
-            })
+            }).slice(0,4)
             }
             
             </Grid>
         </div>
         </div>
-        </Layout>
-    )
-}
 
-export default Tutoriales
+    )
+
+        }
+
+        export default UltimosTuts

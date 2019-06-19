@@ -1,9 +1,11 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 import indexStyle from "../components/Index.module.scss"
-import {Link} from 'gatsby'
+import {Link} from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+
+import UltimosTuts from '../components/ultimostuts';
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -36,8 +38,12 @@ const Index = () => {
       </Link>
       
       </div>
-
+      
 </div>
+
+<h2>Ultimos tutoriales</h2>
+<UltimosTuts />
+
 </Layout>
     );
 

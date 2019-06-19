@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
  .center {
    
-   margin: auto;
+   margin: auto !important;
     
      
  }
@@ -9,7 +9,7 @@
 
 
 .nodecor {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .nodecor:hover {
@@ -17,5 +17,5 @@
 }
 
 .nodecor:visited {
-    color:black;
+    color:black !important;
 }

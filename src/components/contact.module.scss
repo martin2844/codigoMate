@@ -6,6 +6,8 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 
 .container {
 
+    margin-top: -4rem;
+
 h1 {
   width: 100%;
   background: $base;
@@ -174,4 +176,12 @@ a {
   }
 }
 
+}
+
+
+
+@media (max-width:500px) {
+    .container {
+        width: 300px;
+    }
 }

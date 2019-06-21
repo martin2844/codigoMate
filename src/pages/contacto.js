@@ -16,21 +16,21 @@ const Contacto = () => {
 <div className={contactStyles.container}>
 
         <form
-            noValidate autoComplete="off"
+            
             name="contact"
-            method="post"
+            method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            
             >
 
 <h1>Envíame un mensaje</h1>
-  <input placeholder="Tu Nombre" type="text"  value="" required />
-  <input placeholder="Email" type="email" onblur="this.setAttribute('value', this.value);" value="" required />
+  <input name="Name" placeholder="Tu Nombre" type="text" required />
+  <input name="email" placeholder="Email" type="email" onblur="this.setAttribute('value', this.value);" required />
   <span className={contactStyles.validationText}>Please enter a valid email address.</span>
   <div className={contactStyles.flex}>
-    <textarea placeholder="Mensaje" rows="1" required></textarea>
+    <textarea name="message" placeholder="Mensaje" rows="1" required></textarea>
   </div>
-  <button>Enviar</button>
+  <button type="submit">Enviar</button>
 
 
 

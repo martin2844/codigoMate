@@ -10,12 +10,33 @@
 
 .nodecor {
     text-decoration: none !important;
+    color: black;
 }
 
 .nodecor:hover {
-    color: cornflowerblue !important;
+    color: rebeccapurple !important;
 }
 
-.nodecor:visited {
-    color:black !important;
+
+.right {
+    color: black !important;
+    border: 1px;
+    border-style: solid;
+    border-radius: 500px;
+    padding: 2px 14px;
+}
+
+
+.right:hover {
+    background-color: rebeccapurple !important;
+    color: white !important;
+}
+
+
+.nodecor2 {
+    text-decoration: none !important;
+}
+
+.nodecor2:hover {
+    color: white !important;
 }

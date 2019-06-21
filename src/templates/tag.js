@@ -19,7 +19,7 @@ import ShareIcon from '@material-ui/icons/Share';
 
 import Grid from '@material-ui/core/Grid';
 
-import center from './center.module.scss'
+import center from '../pages/center.module.scss'
 
 
 
@@ -56,11 +56,15 @@ const useStyles = makeStyles(theme => ({
   }));
 
 
-const Tutoriales = ()=> {
+const Tutoriales = (props)=> {
+    console.log(props.pageContext.tag)
+    const Tag = props.pageContext.tag;
+    const Title = Tag.charAt(0).toUpperCase() + Tag.slice(1);
     const blog = useStaticQuery(graphql`
     query {
         allMarkdownRemark (
           sort: {fields: frontmatter___date, order: DESC}
+    
           
          )
         
@@ -98,7 +102,10 @@ const Tutoriales = ()=> {
     );
 
 
-    let pijon = blog.allMarkdownRemark.edges;
+    let tutoriales = blog.allMarkdownRemark.edges;
+    let tutorialesFiltrados = tutoriales.filter((post) => {
+      return  post.node.frontmatter.tag === Tag
+    })
 
     const classes = useStyles();
  
@@ -109,12 +116,13 @@ const Tutoriales = ()=> {
            <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=1061060300949201&autoLogAppEvents=1"></script>
             
-            <h1>Tutoriales</h1>
+            <h1>{Title}</h1>
+            <h3>Estos son todos los tutoriales sobre {Title}</h3>
             <div className={center.center}> 
             <div className={classes.root}>
             <Grid container spacing={2} >
             {
-            pijon.map((edge)=> {
+            tutorialesFiltrados.map((edge)=> {
                 let url = "./tutorial/" + edge.node.fields.slug;
                 let tagUrl = "./tag/" + edge.node.frontmatter.tag;
                 console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
@@ -169,7 +177,7 @@ const Tutoriales = ()=> {
                       <IconButton aria-label="Share">
                       <div data-href={'https://codigomate.com/' + url} 
                       data-layout="button" data-size="small"><a className={center.nodecor} title="compartir en facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.codigomate.com%2F&amp;src=sdkpreparse" 
-                      class="fb-xfbml-parse-ignore" rel="noopener noreferrer"><ShareIcon /></a></div>
+                       rel="noopener noreferrer"><ShareIcon /></a></div>
 
 
           
@@ -177,8 +185,7 @@ const Tutoriales = ()=> {
                       <div
           className={clsx(classes.expand)}
          
-        >
-          <Link to={tagUrl} className={center.nodecor2}>
+        ><Link to={tagUrl} className={center.nodecor2}>
           <div className={center.right}>  {edge.node.frontmatter.tag}  </div></Link>  
           </div>
                       

@@ -29,6 +29,7 @@ if (node.internal.type === 'MarkdownRemark') {
 module.exports.createPages = async ({graphql, actions}) => {
     const { createPage } = actions
     const tutorialTemplate = path.resolve('./src/templates/tutorial.js')
+    const tagPage = path.resolve('./src/templates/tag.js')
     const res = await graphql(`
         query {
             allMarkdownRemark {
@@ -36,6 +37,9 @@ module.exports.createPages = async ({graphql, actions}) => {
                     node {
                         fields {
                             slug
+                        }
+                        frontmatter {
+                            tag
                         }
                     }
                 }
@@ -58,5 +62,19 @@ module.exports.createPages = async ({graphql, actions}) => {
             }
         })
     })
+
+    res.data.allMarkdownRemark.edges.forEach((edge) =>{
+        console.log("TAGPage created!!!!!!!!!!!!!!!!!!!!!!")
+        createPage({
+            component: tagPage,
+            path: `/tag/${edge.node.frontmatter.tag}`,
+            context: {
+            //what to pass with each page
+            slug: edge.node.fields.slug ,
+            tag:  edge.node.frontmatter.tag
+            }
+        })
+    })
+
 
 }

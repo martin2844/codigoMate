@@ -29,7 +29,7 @@ const Index = () => {
 <h1>Bienvenidos!</h1>
 <h2>La programación web crece todos los dias, aprendamos juntos</h2>
 <p>En este sitio vas a poder encontrar tutoriales de diseño y programación web. Javascript, css, html, y frameworks.</p>
-<p>De argentina para el mundo</p>
+<p>Videos cortos, largos, cursos completos. Un poco de todo, y sobre todo en español!</p>
 <div >
     <Link className={indexStyle.nodecor} to="/tutoriales">
     <Button  variant="contained" color="primary" className={classes.button}>

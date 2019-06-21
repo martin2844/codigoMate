@@ -8,7 +8,7 @@ const Footer = () => {
             <div>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
             <a className={footerStyles.footerLinkBg} href="https://github.com/martin2844"><i className="fab fa-github"></i></a>
-            <a className={footerStyles.footerLinkBg} href=""><i className="fab fa-linkedin"></i></a>
+            <a className={footerStyles.footerLinkBg} href="https://www.instagram.com/codigo.mate/"><i className="fab fa-instagram"></i></a>
             <a className={footerStyles.footerLinkBg} href="https://www.youtube.com/channel/UC9nNIxlNohIoIrjtC4ueIOA"><i className="fab fa-youtube"></i></a>
             
             </div>

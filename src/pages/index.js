@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import indexStyle from "../components/Index.module.scss"
-import {Link} from 'gatsby';
+import {Link , graphql, useStaticQuery} from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
@@ -18,10 +18,51 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-
+ 
 
 
 const Index = () => { 
+  const query = useStaticQuery(graphql`
+  query {
+      allMarkdownRemark (
+        sort: {fields: frontmatter___date, order: DESC}
+        
+       )
+      
+      
+      {
+          edges {
+              node { 
+                  frontmatter {
+                      title,
+                      date,
+                      type,
+                      abs,
+                      tag,
+                      featuredImage {
+                          relativePath,
+                          absolutePath,
+                          childImageSharp{
+                              fixed(width: 300) {
+                                  ...GatsbyImageSharpFixed
+                              }
+                          }
+                      }
+                          
+                  }
+                  html,
+                  excerpt,
+                  fields {
+                      slug
+                  }
+              }
+          }
+      }
+  }
+  `
+  );
+
+  console.log(query)
     const classes = useStyles()
     return (
 <Layout>

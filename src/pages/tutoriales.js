@@ -117,6 +117,7 @@ const Tutoriales = ()=> {
             pijon.map((edge)=> {
                 let url = "./tutorial/" + edge.node.fields.slug;
                 let tagUrl = "./tag/" + edge.node.frontmatter.tag;
+                let abstract = edge.node.frontmatter.abs.substring(0,200) + "...";
                 console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
                 
                 return (
@@ -161,7 +162,7 @@ const Tutoriales = ()=> {
                     </Link>
                     <CardContent>
                       <Typography variant="body2" color="textSecondary" component="p">
-                      {edge.node.frontmatter.abs}
+                      {abstract}
                       </Typography>
                     </CardContent>
                     <CardActions disableSpacing>

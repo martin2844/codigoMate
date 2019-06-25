@@ -111,6 +111,7 @@ const UltimosTuts = ()=> {
               let url = "./tutorial/" + edge.node.fields.slug;
               let tagUrl = "./tag/" + edge.node.frontmatter.tag;
               console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
+              let abstract = edge.node.frontmatter.abs.substring(0,200) + "...";
               
               return (
 
@@ -155,7 +156,7 @@ const UltimosTuts = ()=> {
                   </Link>
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                    {edge.node.frontmatter.abs}
+                    {abstract}
                     </Typography>
                   </CardContent>
                   <CardActions disableSpacing>

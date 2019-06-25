@@ -211,6 +211,9 @@ const Tutoriales = (props)=> {
             
             </Grid>
         </div>
+
+        <div className={center.space}><Link className={center.nodecor} to="/tutoriales">Volver a tutoriales</Link></div>    
+        
         </div>
         </Layout>
     )

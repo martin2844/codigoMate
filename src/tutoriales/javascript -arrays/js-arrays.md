@@ -95,12 +95,44 @@ __proto__: Array(0)
 
 ___
 
+3. Some
+
+El metodo some, prueba que al menos uno de los elementos del array pase la pruebaw que le pongamos en la función.
+Devuelve un Boolean, osea un verdadero o falso.
+
+```javascript
+
+const array = [1,2,3,4,5,6,7,8];
+
+const hayNumerosPares = array.some((numero) => {
+    return numero % 2 === 0;
+});
+
+console.log(hayNumerosPares);
+
+```
+
+devuelve simplemente true
+
+___
+
+4. Includes
+
+Al igual que some, va a devolver un Boolean. Este metodo va a verificar que el array contenga un determinado elemento.
 
 
 
 
+```javascript
 
+const array = [1,2,3,4,5,6,7,8];
 
+const contieneNumeroSiete = array.includes(7);
+
+console.log(hayNumerosPares);
+
+```
+devuelve simplemente true
 
 
 

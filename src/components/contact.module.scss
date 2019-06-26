@@ -6,7 +6,15 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 
 .container {
 
-    margin-top: -4rem;
+label {
+  font-size: 0.8em;
+  margin: 28px 25px 10px;
+  width: $width;
+  display: block;
+  border: none;
+  padding: 20px 0 10px;
+}
+    
 
 h1 {
   width: 100%;
@@ -15,6 +23,7 @@ h1 {
   color: white;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.05);
   border-radius: 3px 3px 0 0;
+
 }
 
 form {
@@ -39,7 +48,7 @@ input,
 textarea {
   font: inherit;
   font-size: 0.8em;
-  margin: 28px 25px 10px;
+  margin: 28px 0px 10px;
   width: $width;
   display: block;
   border: none;
@@ -49,7 +58,7 @@ textarea {
   background-position: -$width 0;
   background-size: $width 100%;
   background-repeat: no-repeat;
-  transition: background 0.3s $cubic;
+  transition: 0.3s $cubic;
   resize: none;
   overflow: hidden; 
   &:focus::-webkit-input-placeholder {

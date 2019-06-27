@@ -134,6 +134,81 @@ console.log(hayNumerosPares);
 ```
 devuelve simplemente true
 
+___
+
+
+5. Every
+
+Se va a fijar que cada elemento del array cumpla la condición que ponemos. Si es verdad, devuelve true, sino falso.
+Ejemplo:
+
+```javascript
+var array2 = [1,2,3,4,5,6,7];
+
+var menoraQue8 = array2.every((numero) => {
+    return numero < 8
+});
+
+console.log(menoraQue8);
+```
+devuelve simplemente true
+
+___
+
+6. forEach
+
+Este es uno de los que más se usa probablemente, sirve para evitar un for loop tradicional. Es mucho más limpio en su sintaxis.
+Lo que va hacer es repetir lo que nosotros pasemos por cada elemento del array.
+
+
+```javascript
+var array2 = [1,2,3,4,5,6,7];
+
+array2.forEach((numero) => {
+    console.log("esto es un for each Loop " + numero );
+
+});
+
+
+```
+Devuelve -->
+
+```javascript
+
+esto es un for each Loop 1
+esto es un for each Loop 2
+esto es un for each Loop 3
+esto es un for each Loop 4
+esto es un for each Loop 5
+esto es un for each Loop 6
+esto es un for each Loop 7
+
+```
+
+___
+
+8. Find
+
+```javascript
+
+var array1 = [6, 14, 28, 4, 34];
+
+var encontrado = array1.find(function(numero) {
+  return numero > 10;
+});
+
+console.log(encontrado);
+
+```
+Devuelve ---> 14
+
+Esto es porque devuelve el primer resultado que encuentre que cumpla con la condición que le pasamos.
+
+___
+
+
+## Mirá el video que está todo mucho mejor explicado!
+
 
 
 [![Mira el video](https://i.ytimg.com/vi/IFzWJ_Gtr4A/hqdefault.jpg)](https://www.youtube.com/watch?v=IFzWJ_Gtr4A&t)

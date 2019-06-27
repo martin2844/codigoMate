@@ -1,11 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
+import UltimosTuts from '../components/ultimostuts';
 import indexStyle from "../components/Index.module.scss"
+
 import {Link} from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-import UltimosTuts from '../components/ultimostuts';
+
 
 const useStyles = makeStyles(theme => ({
     button: {

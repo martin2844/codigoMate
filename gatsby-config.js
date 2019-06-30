@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: 'CodigoMate',
-    author: 'Martin Chammah'
+    author: 'Martin Chammah',
+    siteUrl: `https://www.codigomate.com`
   },
   
   plugins: [

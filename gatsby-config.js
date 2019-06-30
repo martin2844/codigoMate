@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby The Site',
-    author: 'Tito Barreda'
+    title: 'CodigoMate',
+    author: 'Martin Chammah'
   },
   
   plugins: [
@@ -20,6 +20,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/success`, `/tags/`]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-material-ui',
       // If you want to use styled components you should change the injection order.
       options: {
@@ -27,6 +33,14 @@ module.exports = {
         //   injectFirst: true,
         // },
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.codigomate.com',
+        sitemap: 'https://www.codigomate.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
@@ -45,7 +59,8 @@ module.exports = {
           }
         ]
       }
-  }
+  },
+
   ]
 
 

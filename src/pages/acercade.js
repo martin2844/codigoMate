@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import aboutStyle from '../components/about.module.scss'
 import Img from "gatsby-image"
+import {Helmet} from "react-helmet";
 
 
 export const query = graphql`
@@ -23,8 +24,13 @@ export const query = graphql`
 const AcercaDe = (props) => {
     console.log(props.data.file)
     return (
-        
+   
         <Layout>
+                 <Helmet>
+        <title>codigoMate | Acerca de</title>
+        <meta name="description" content="about page, acerca de" />
+        <meta name="keywords" content="quien soy, contactame, javascript, tutorial" />
+      </Helmet>
              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
             <h1>Acerca de</h1>
             <h2>Hola, me llamo Martin</h2>

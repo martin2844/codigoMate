@@ -4,7 +4,7 @@ import indexStyle from "../components/Index.module.scss"
 import {Link} from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
+import {Helmet} from "react-helmet";
 import UltimosTuts from '../components/ultimostuts';
 
 
@@ -55,6 +55,11 @@ const Index = () => {
     const classes = useStyles()
     return (
 <Layout>
+<Helmet>
+        <title>codigoMate | Index</title>
+        <meta name="description" content="Index, Home" />
+        <meta name="keywords" content="tutoriales, programacion web, programacion español" />
+      </Helmet>
 <div className={indexStyle.jumbotron}>
 <h1>Bienvenidos!</h1>
 <h2>La programación web crece todos los dias, aprendamos juntos</h2>

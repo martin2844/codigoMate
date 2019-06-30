@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { navigate } from 'gatsby-link'
+import {Helmet} from "react-helmet";
 
 
 import contactStyles from '../components/contact.module.scss'
@@ -41,6 +42,11 @@ export default class Contacto extends React.Component {
     render () {
       return (
         <Layout> 
+            <Helmet>
+        <title>codigoMate | Contacto</title>
+        <meta name="description" content="contacto contactame" />
+        <meta name="keywords" content="quien soy, contactame, javascript, tutorial" />
+      </Helmet>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
 <div className={contactStyles.container}>
 

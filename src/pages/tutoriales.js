@@ -14,7 +14,7 @@ import Typography from '@material-ui/core/Typography';
 
 import ShareIcon from '@material-ui/icons/Share';
 
-
+import {Helmet} from "react-helmet";
 
 
 import Grid from '@material-ui/core/Grid';
@@ -106,6 +106,11 @@ const Tutoriales = ()=> {
 
     return (
         <Layout>
+          <Helmet>
+        <title>codigoMate | Tutoriales</title>
+        <meta name="description" content="Todos los tutoriales" />
+        <meta name="keywords" content="cursos, tutoriales, programacion web, programacion español" />
+      </Helmet>
            <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=1061060300949201&autoLogAppEvents=1"></script>
             

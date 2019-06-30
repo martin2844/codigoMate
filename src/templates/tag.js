@@ -11,6 +11,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
+import {Helmet} from "react-helmet";
 
 import ShareIcon from '@material-ui/icons/Share';
 
@@ -113,6 +114,11 @@ const Tutoriales = (props)=> {
 
     return (
         <Layout>
+            <Helmet>
+        <title>codigoMate | {Title}</title>
+        <meta name="description" content={Title} />
+        <meta name="keywords" content="cursos, tutoriales, programacion web, programacion español" />
+      </Helmet>
            <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=1061060300949201&autoLogAppEvents=1"></script>
             

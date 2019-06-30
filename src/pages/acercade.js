@@ -60,7 +60,7 @@ const AcercaDe = (props) => {
                 <a className={aboutStyle.social} href="https://github.com/martin2844"><i className="fab fa-github"></i></a>
             <a className={aboutStyle.social} href="https://www.instagram.com/codigo.mate/"><i className="fab fa-instagram"></i></a>
             <a className={aboutStyle.social} href="https://www.youtube.com/channel/UC9nNIxlNohIoIrjtC4ueIOA"><i className="fab fa-youtube"></i></a>
-                <a className={aboutStyle.social} href="https://www.instagram.com/codigo.mate/"><i class="fab fa-twitter"></i></a>
+                <a className={aboutStyle.social} href="https://www.twitter.com/codigomate"><i class="fab fa-twitter"></i></a>
                 </div>
 
 

@@ -50,7 +50,7 @@ export default class Contacto extends React.Component {
 
      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
 
-<form name="contact1" method="POST" data-netlify="true">
+<form name="contact1" method="POST" data-netlify="true" action="/success/">
 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>

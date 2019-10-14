@@ -63,18 +63,5 @@ module.exports.createPages = async ({graphql, actions}) => {
         })
     })
 
-    res.data.allMarkdownRemark.edges.forEach((edge) =>{
-        console.log("TAGPage created!!!!!!!!!!!!!!!!!!!!!!")
-        createPage({
-            component: tagPage,
-            path: `/tag/${edge.node.frontmatter.tag}`,
-            context: {
-            //what to pass with each page
-            slug: edge.node.fields.slug ,
-            tag:  edge.node.frontmatter.tag
-            }
-        })
-    })
-
 
 }

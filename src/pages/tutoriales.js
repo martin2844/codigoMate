@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Layout from '../components/Layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import clsx from 'clsx';
@@ -57,6 +57,10 @@ const useStyles = makeStyles(theme => ({
 
 
 const Tutoriales = ()=> {
+    
+    
+
+
     const blog = useStaticQuery(graphql`
     query {
         allMarkdownRemark (
@@ -97,12 +101,42 @@ const Tutoriales = ()=> {
     `
     );
 
-
+    
     let pijon = blog.allMarkdownRemark.edges;
+    const [cards, setCards] = useState(pijon);
+    const [filter, setFilter] = useState("");
+
+    useEffect(() => {
+      if (filter) {  // don't do anyhiting when filter is empty on initial render
+        const filteredCards = cards.filter((card) => {
+          return card.node.frontmatter.tag === filter
+        })
+        setCards(filteredCards)
+      }
+    }, [filter, setCards]);
+
 
     const classes = useStyles();
  
-
+    const cross = (
+      <div>
+        <p>Mostrando los tutoriales sobre {filter}  <div onClick={ () => {
+            setFilter("");
+            setCards(pijon);
+          
+            
+            
+        
+        }}
+          
+        
+           className={center.bubble}>
+              x  </div></p>
+        
+         
+       
+      </div>
+    )
 
     return (
         <Layout>
@@ -114,42 +148,24 @@ const Tutoriales = ()=> {
            <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=1061060300949201&autoLogAppEvents=1"></script>
             
-            <h1>Tutoriales</h1>
+            <h1>Tutoriales</h1>{filter ? cross : null}
+            
             <div className={center.center}> 
             <div className={classes.root}>
             <Grid container spacing={2} >
             {
-            pijon.map((edge)=> {
+            cards.map((edge)=> {
                 let url = "./tutorial/" + edge.node.fields.slug;
-                let tagUrl = "./tag/" + edge.node.frontmatter.tag;
                 let abstract = edge.node.frontmatter.abs.substring(0,200) + "...";
                 console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
                 
-                return (
-
-
-                    
-
-
-
-
-
-
-
-
-
-
-                
+                return (                
                          <Grid item xs={8} sm={6} md={4} lg={3} className={center.center}>
-                        
-                        
-       
-
-
+      
                     <Card className={classes.card}>
                     <CardHeader
                       avatar={
-                        <Avatar aria-label="Recipe" className={classes.avatar}>
+                        <Avatar className={classes.avatar}>
                           {edge.node.frontmatter.type}
                         </Avatar>
                       }
@@ -180,12 +196,23 @@ const Tutoriales = ()=> {
 
           
                       </IconButton>
-                      <div
+                      <div  
           className={clsx(classes.expand)}
          
         >
-          <Link to={tagUrl} className={center.nodecor2}>
-          <div className={center.right}>  {edge.node.frontmatter.tag}  </div></Link>  
+          
+          <div onClick={ () => {
+            setFilter(edge.node.frontmatter.tag);
+
+          
+            
+            
+        
+        }
+          
+        }
+           className={center.right}>
+              {edge.node.frontmatter.tag}  </div>
           </div>
                       
                     </CardActions>

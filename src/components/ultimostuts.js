@@ -109,7 +109,7 @@ const UltimosTuts = ()=> {
             {
             cartillas.map((edge)=> {
               let url = "./tutorial/" + edge.node.fields.slug;
-              let tagUrl = "./tag/" + edge.node.frontmatter.tag;
+              let tagUrl = "./tutoriales/";
               console.log(edge.node.frontmatter.featuredImage.childImageSharp.fixed.src)
               let abstract = edge.node.frontmatter.abs.substring(0,200) + "...";
               

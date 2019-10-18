@@ -63,8 +63,8 @@ const Index = () => {
 <div className={indexStyle.jumbotron}>
 <h1>Bienvenidos!</h1>
 <h2>La programación web crece todos los dias, aprendamos juntos</h2>
-<p>En este sitio vas a poder encontrar tutoriales de diseño y programación web. Javascript, css, html, y frameworks.</p>
-<p>Videos cortos, largos, cursos completos. Un poco de todo, y sobre todo en español!</p>
+<p>Este es mi blog, y en él vas a poder encontrar tutoriales de diseño y programación web. Javascript, css, html, y frameworks.</p>
+<p>Videos cortos, largos, posteos sobre temas. Bastante variado pero sobre todo en español!</p>
 <div >
     <Link className={indexStyle.nodecor} to="/tutoriales">
     <Button  variant="contained" color="primary" className={classes.button}>

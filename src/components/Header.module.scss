@@ -155,6 +155,8 @@ body {
 
 
 .brand-title:hover {
+    animation-name: bounce;
+    -moz-animation-name: bounce;
     animation: bounce 2.5s infinite;
     -webkit-animation: bounce 2.5s infinite; 
     -moz-animation: bounce 2.5s infinite; 

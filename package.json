@@ -18,7 +18,7 @@
     "@material-ui/styles": "^4.1.1",
     "@nfront/global-styles": "^1.2.1",
     "env-cmd": "^9.0.3",
-    "gatsby": "^2.9.1",
+    "gatsby": "^5.14.3",
     "gatsby-cli": "^2.6.9",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-feed": "^2.3.1",

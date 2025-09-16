@@ -33,7 +33,7 @@
     "gatsby-remark-images": "^3.0.14",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.0.38",
-    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-remark": "^6.15.0",
     "gatsby-transformer-sharp": "^2.1.21",
     "mdi-material-ui": "^6.0.0",
     "node-sass": "^4.12.0",
